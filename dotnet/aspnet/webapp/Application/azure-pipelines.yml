@@ -38,10 +38,11 @@ steps:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)'
     ArtifactName: 'drop'
     publishLocation: 'Container'
+
 - task: AzureWebApp@1
   inputs:
     azureSubscription: 'Essai gratuit(0154af31-1257-41e6-9e77-49c9344f1ee7)'
     appType: 'webApp'
     appName: 'jeremieanzevuiSampleWebApplication'
-    package: '$(System.DefaultWorkingDirectory)/**/*.zip'
+    package: '$(Build.ArtifactStagingDirectory)/**/*.zip'
     deploymentMethod: 'auto'
