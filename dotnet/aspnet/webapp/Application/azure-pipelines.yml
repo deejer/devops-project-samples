@@ -32,3 +32,11 @@ steps:
   inputs:
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
+
+- task: AzureWebApp@1
+  inputs:
+    azureSubscription: 'Essai gratuit(0154af31-1257-41e6-9e77-49c9344f1ee7)'
+    appType: 'webApp'
+    appName: 'SampleWebApplication'
+    package: '$(System.DefaultWorkingDirectory)/**/*.zip'
+    deploymentMethod: 'auto'.
