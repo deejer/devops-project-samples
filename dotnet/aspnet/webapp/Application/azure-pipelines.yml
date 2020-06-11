@@ -39,4 +39,4 @@ steps:
     appType: 'webApp'
     appName: 'SampleWebApplication'
     package: '$(System.DefaultWorkingDirectory)/**/*.zip'
-    deploymentMethod: 'auto'.
+    deploymentMethod: 'auto'
