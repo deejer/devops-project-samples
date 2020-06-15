@@ -24,7 +24,7 @@ steps:
 - task: VSBuild@1
   inputs:
     solution: '$(solution)'
-    msbuildArgs: '/p:DeployOnBuild=true /p:Configuration=Release /p:WebPublishMethod=Package /p:PackageAsSingleFile=true /p:SkipInvalidConfigurations=true /p:DeployDefaultTarget=WebPublish /p:DeleteExistingFiles=True  /p:publishUrl="$(build.artifactStagingDirectory)\YourProjectNameFolder" /p:DeployIisAppPath="Default Web Site"'
+    msbuildArgs: '/p:DeployOnBuild=true /p:Configuration=Release /p:WebPublishMethod=Package /p:PackageAsSingleFile=true /p:SkipInvalidConfigurations=true /p:DeployDefaultTarget=WebPublish /p:DeleteExistingFiles=True  /p:publishUrl="$(build.ArtifactStagingDirectory)\YourProjectNameFolder" /p:PackageLocation=”$(build.ArtifactStagingDirectory)"" /p:DeployIisAppPath="Default Web Site"'
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
 
